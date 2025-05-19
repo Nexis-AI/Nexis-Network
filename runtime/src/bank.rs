@@ -4865,7 +4865,7 @@ impl Bank {
             signature_count,
         } = counts;
 
-        let tx_count = if self.bank_tranaction_count_fix_enabled() {
+        let tx_count = if self.bank_transaction_count_fix_enabled() {
             committed_transactions_count
         } else {
             committed_transactions_count.saturating_sub(committed_with_failure_result_count)
@@ -6941,9 +6941,9 @@ impl Bank {
         consumed_budget.saturating_sub(budget_recovery_delta)
     }
 
-    pub fn bank_tranaction_count_fix_enabled(&self) -> bool {
+    pub fn bank_transaction_count_fix_enabled(&self) -> bool {
         self.feature_set
-            .is_active(&feature_set::bank_tranaction_count_fix::id())
+            .is_active(&feature_set::bank_transaction_count_fix::id())
     }
 
     pub fn shrink_candidate_slots(&self) -> usize {

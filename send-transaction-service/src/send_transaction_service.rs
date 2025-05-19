@@ -799,7 +799,7 @@ mod test {
         let (sender, receiver) = unbounded();
 
         let connection_cache = Arc::new(ConnectionCache::default());
-        let send_tranaction_service = SendTransactionService::new::<NullTpuInfo>(
+        let send_transaction_service = SendTransactionService::new::<NullTpuInfo>(
             tpu_address,
             &bank_forks,
             None,
@@ -810,7 +810,7 @@ mod test {
         );
 
         drop(sender);
-        send_tranaction_service.join().unwrap();
+        send_transaction_service.join().unwrap();
     }
 
     #[test]
