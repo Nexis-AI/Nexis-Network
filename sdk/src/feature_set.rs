@@ -283,7 +283,7 @@ pub mod reject_vote_account_close_unless_zero_credit_epoch {
     solana_sdk::declare_id!("FzCCojixUktU4qbkWVEEjrDimqNajd1YyW1Wto4FMoB3");
 }
 
-pub mod bank_tranaction_count_fix {
+pub mod bank_transaction_count_fix {
     solana_sdk::declare_id!("7DeeVjqtgV4FYMrwcwoMRPCTKv8As4Y97yvRzDeuMk4u");
 }
 
@@ -619,7 +619,7 @@ lazy_static! {
             (update_syscall_base_costs::id(), "Update syscall base costs"),
             (reject_vote_account_close_unless_zero_credit_epoch::id(), "fail vote account withdraw to 0 unless account earned 0 credits in last completed epoch"),
             (add_get_processed_sibling_instruction_syscall::id(), "add add_get_processed_sibling_instruction_syscall"),
-            (bank_tranaction_count_fix::id(), "Fixes Bank::transaction_count to include all committed transactions, not just successful ones"),
+            (bank_transaction_count_fix::id(), "Fixes Bank::transaction_count to include all committed transactions, not just successful ones"),
             (disable_bpf_deprecated_load_instructions::id(), "Disable ldabs* and ldind* BPF instructions"),
             (disable_bpf_unresolved_symbols_at_runtime::id(), "Disable reporting of unresolved BPF symbols at runtime"),
             (add_get_processed_sibling_instruction_syscall::id(), "add add_get_processed_sibling_instruction_syscall"),

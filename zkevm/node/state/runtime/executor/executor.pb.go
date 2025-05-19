@@ -4170,7 +4170,7 @@ type ProcessTransactionResponseV2 struct {
 	GasLeft uint64 `protobuf:"varint,8,opt,name=gas_left,json=gasLeft,proto3" json:"gas_left,omitempty"`
 	// Total gas used as result of execution or gas estimation
 	GasUsed uint64 `protobuf:"varint,9,opt,name=gas_used,json=gasUsed,proto3" json:"gas_used,omitempty"`
-	// Cumulative gas used by this tranaction in the block
+        // Cumulative gas used by this transaction in the block
 	CumulativeGasUsed uint64 `protobuf:"varint,10,opt,name=cumulative_gas_used,json=cumulativeGasUsed,proto3" json:"cumulative_gas_used,omitempty"`
 	// Total gas refunded as result of execution
 	GasRefunded uint64 `protobuf:"varint,11,opt,name=gas_refunded,json=gasRefunded,proto3" json:"gas_refunded,omitempty"`
